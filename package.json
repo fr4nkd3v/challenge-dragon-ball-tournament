@@ -1,0 +1,25 @@
+{
+  "name": "desafio-torneo-dragon-ball",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "wds --node-resolve",
+    "server:watch": "wds --node-resolve --watch",
+    "dev:watch": "conc \"tsc --watch\" \"npm run server:watch\"",
+    "dev": "npm run build && npm run dev:watch",
+    "start": "npm run build && npm run server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && tsc",
+    "clean": "rimraf ./dist && mkdir dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@web/dev-server": "^0.4.6",
+    "concurrently": "^9.0.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.3"
+  }
+}
